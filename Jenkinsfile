@@ -8,11 +8,6 @@ pipeline {
             }
         }
     
-         stage ("terraform refresh") {
-            steps {
-                sh ("terraform refresh") 
-            }
-        }
         stage ("terraform init") {
             steps {
                 sh ("terraform init -reconfigure") 
